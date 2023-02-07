@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h1 id="titulo">COMPRA DE ARROZ</h1>
+        <section id="selectPeso">
+         <p for="" id="labelTipoPeso">Seleciona el tipo de peso</p>
+        <select name="tipoPeso" id="tipoPeso" >
+            <option value="" selected>Seleccione un peso</option>
+            <option value="1">Kilo</option>
+            <option value="2">Libra</option>
+            <option value="3">Gramo</option>
+        </select>
+    </section>
+
+    <section id="ingresoPeso">
+        <p id="inputUsuario">Ingrese la cantidad que desea comprar</p>
+        <input type="text" id="inputCantidad" placeholder="Ingrese Cantidad" >
+    </section>
+
+    <Section>
+        <button id="bodega1" @onclick="compraBodega1">
+            <img src="./imagenes/shop.png" alt="bodega">
+           <p>Comprar en <br> Bodega uno</p> 
+        </button>
+        <button id="bodega2" @onclick="compraBodega2">
+            <img src="./imagenes/shop.png" alt="bodega">
+           <p>Comprar en <br> Bodega dos</p> 
+        </button>
+    </Section>
+        
+
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+
+</html>
