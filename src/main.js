@@ -23,8 +23,10 @@ const app = createApp({
             } else if(tipoPeso == 3) {
                 cantidadKilos = cantidad / 1000;
             }
-
-            if(this.bodegaUno - cantidadKilos > this.bodegaUno / 2) {
+            if(cantidadKilos === 0){
+                alert("ingrese el peso q desea comprar")
+            }
+            else if(this.bodegaUno - cantidadKilos > this.bodegaUno / 2) {
                 alert("Compra realizada con exito!");
                 this.bodegaUno -= cantidadKilos;
             } else if(this.bodegaUno - cantidadKilos < this.bodegaUno / 10) {
@@ -45,8 +47,10 @@ const app = createApp({
             } else if(tipoPeso == 3) {
                 cantidadKilos = cantidad / 1000;
             }
-
-            if(this.bodegaDos - cantidadKilos > this.bodegaDos / 2) {
+            if(cantidadKilos === 0){
+                alert("ingrese el peso q desea comprar")
+            }
+            else if(this.bodegaDos - cantidadKilos > this.bodegaDos / 2) {
                 alert("Compra realizada con exito!");
                 this.bodegaDos -= cantidadKilos;
             } else if(this.bodegaDos - cantidadKilos < this.bodegaDos / 10) {
