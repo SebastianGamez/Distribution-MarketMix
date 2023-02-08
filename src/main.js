@@ -7,6 +7,7 @@ let app = new Vue({
         bodegaUno: 100000,
         bodegaDos: 230000
     },
+
     methods: {
         compraBodegaUno() {
             let cantidad = document.getElementById("inputCantidad").value;
@@ -30,6 +31,7 @@ let app = new Vue({
                 alert("Quedan menos de la mitad de arroz en esta bodega, por favor elija otra bodega");
             }
         },
+
         compraBodegaDos() {
             let cantidad = document.getElementById("inputCantidad").value;
             let tipoPeso = document.getElementById("tipoPeso").value;
