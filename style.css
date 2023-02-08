@@ -32,8 +32,11 @@ h1 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+input:focus{
+    color: black;
+}
+
 #inputCantidad {
-    color: white;
     padding: 10px;
     border-radius: 10px;
     border: none;
@@ -90,6 +93,7 @@ button{
     border-style: dotted;
     border-color: aqua;
     margin-top: 20px;
+    cursor: pointer;
 }
 form{
     

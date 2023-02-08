@@ -5,46 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Distribution</title>
 </head>
 <body>
 
     
         <div id="app">
             <h1 id="titulo">COMPRA DE ARROZ</h1>
-            <form action="" @submit.prevent="">
-                <section id="selectPeso">
-                   <p for="" id="labelTipoPeso">Seleciona el tipo de peso</p>
-                   <select name="tipoPeso" id="tipoPeso" >
-                       <option value="" selected disabled>Seleccione un peso</option>
-                       <option value="1">Kilo</option>
-                       <option value="2">Libra</option>
-                       <option value="3">Gramo</option>
-                   </select>
-                   </section>
-                   <section>
-                   <p id="inputUsuario">Ingrese la cantidad que desea comprar</p>
-                   <input type="text" id="inputCantidad" placeholder="Ingrese Cantidad" >
+            <section id="selectPeso">
+                <p for="" id="labelTipoPeso">Selecciona el tipo de peso</p>
+                <select name="tipoPeso" id="tipoPeso" v-model="tipoPeso">
+                    <option value="" selected disabled>Seleccione un peso</option>
+                    <option value="1">Kilo</option>
+                    <option value="2">Libra</option>
+                    <option value="3">Gramo</option>
+                </select>
                 </section>
-           <section>
-                   <button id="bodega1" @onclick="compraBodegaUno">
-                       <img src="./imagen/shop.png" alt="bodega">
-                       <p>Comprar en <br> Bodega uno</p> 
-                   </button>
-           
-                   <button id="bodega2" @onclick="compraBodegaDos">
-                       <img src="./imagen/shop.png" alt="bodega">
-                       <p>Comprar en <br> Bodega dos</p> 
-                   </button>
-                </section>
-
-            </form>
-            
+                <section>
+                <p id="inputUsuario">Ingrese la cantidad que desea comprar</p>
+                <input type="text" id="inputCantidad" placeholder="Ingrese Cantidad" v-model.number="cantidad">
+             </section>
+             <section>
+                <button id="bodega1" @click="compraBodegaUno">
+                    <img src="./imagen/shop.png" alt="bodega">
+                    <p>Comprar en <br> Bodega uno</p> 
+                </button>
+        
+                <button id="bodega2" @click="compraBodegaDos">
+                    <img src="./imagen/shop.png" alt="bodega">
+                    <p>Comprar en <br> Bodega dos</p> 
+                </button>
+             </section>
     
         </div>
     
 </body>
 
-<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
-<script src="./main.js"></script>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="./src/main.js"></script>
 </html>

@@ -1,16 +1,19 @@
+const { createApp } = Vue;
 
 
-
-let app = new Vue({
-    el: "#app",
-    data: {
-        bodegaUno: 100000,
-        bodegaDos: 230000
+const app = createApp({
+    data (){
+        return {
+            cantidad: '',
+            tipoPeso: '',
+            bodegaUno: 100000,
+            bodegaDos: 230000
+        }
     },
     methods: {
         compraBodegaUno() {
-            let cantidad = document.getElementById("inputCantidad").value;
-            let tipoPeso = document.getElementById("tipoPeso").value;
+            let cantidad = this.cantidad;
+            let tipoPeso = this.tipoPeso;
             let cantidadKilos = 0;
 
             if(tipoPeso == 1) {
@@ -31,8 +34,8 @@ let app = new Vue({
             }
         },
         compraBodegaDos() {
-            let cantidad = document.getElementById("inputCantidad").value;
-            let tipoPeso = document.getElementById("tipoPeso").value;
+            let cantidad = this.cantidad;
+            let tipoPeso = this.tipoPeso;
             let cantidadKilos = 0;
 
             if(tipoPeso == 1) {
@@ -54,3 +57,5 @@ let app = new Vue({
         }
     }
 });
+
+app.mount('#app');
