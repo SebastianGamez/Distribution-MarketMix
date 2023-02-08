@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0b1721;
+    height: 100vh;
+}
+
+#app {
+    
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    border-radius: 10%;
+    position: relative;
+    
+
+}
+
+h1 {
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#inputCantidad {
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    width: 200px;
+    margin: 10px;
+    position: absolute;
+    margin-left:70px;
+    
+    
+}
+#inputUsuario{
+    font-size: 20px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#labelTipoPeso{
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#tipoPeso {
+
+
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+    padding: 7px 10px;
+    height: 42px;
+    outline: 0;
+    border: 0;
+    border-radius: 0;
+    background: #f0f0f0;
+    color: #7b7b7b;
+    font-size: 1em;
+    color: #999;
+    font-family: 'Quicksand', sans-serif;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    position: relative;
+    transition: all 0.25s ease;
+
+}
+
+button{
+    margin: 15px;
+    width: 120px;
+    height: 120px;
+    color: white;
+    background: none;
+    border-radius: 10px;
+    border-style: dotted;
+    border-color: aqua;
+    margin-top: 20px;
+}
+form{
+    
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
