@@ -23,7 +23,7 @@ const app = createApp({
             } else if(tipoPeso == 3) {
                 cantidadKilos = cantidad / 1000;
             }
-            if(cantidadKilos === 0){
+            if(cantidadKilos === null){
                 alert("ingrese el peso q desea comprar")
             }
             else if(this.bodegaUno - cantidadKilos > this.bodegaUno / 2) {
@@ -38,7 +38,7 @@ const app = createApp({
         compraBodegaDos() {
             let cantidad = this.cantidad;
             let tipoPeso = this.tipoPeso;
-            let cantidadKilos = 0;
+            let cantidadKilos = null;
 
             if(tipoPeso == 1) {
                 cantidadKilos = cantidad;
@@ -47,7 +47,7 @@ const app = createApp({
             } else if(tipoPeso == 3) {
                 cantidadKilos = cantidad / 1000;
             }
-            if(cantidadKilos === 0){
+            if(cantidadKilos === null){
                 alert("ingrese el peso q desea comprar")
             }
             else if(this.bodegaDos - cantidadKilos > this.bodegaDos / 2) {
