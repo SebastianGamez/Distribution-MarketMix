@@ -12,8 +12,8 @@ const app = createApp({
             
             cantidad: '',
             tipoPeso: '',
-            bodegaUno: 100000,
-            bodegaDos: 230000,
+            bodegaUno: 0,
+            bodegaDos: 0,
 
             registros: []
         }
@@ -23,6 +23,8 @@ const app = createApp({
 
     mounted() {
         this.registros = JSON.parse(localStorage.getItem("registros"))? JSON.parse(localStorage.getItem("registros")) : [];
+        this.bodegaUno = JSON.parse(localStorage.getItem("bodegaUno"))? JSON.parse(localStorage.getItem("bodegaUno")) : 100000;
+        this.bodegaDos = JSON.parse(localStorage.getItem("bodegaDos"))? JSON.parse(localStorage.getItem("bodegaDos")) : 230000;
         if(this.registros.length > 0) {
             this.render.verRegistros = true;
         }
@@ -58,6 +60,7 @@ const app = createApp({
                     cantidad: cantidadKilos,
                 });
                 localStorage.setItem("registros", JSON.stringify(this.registros));
+                localStorage.setItem("bodegaUno", JSON.stringify(this.bodegaUno));
                 this.cantidad = '';
             } else if(this.bodegaUno - cantidadKilos < this.bodegaUno / 10) {
                 alert("No queda suficiente arroz en esta bodega, por favor elija otra bodega");
@@ -88,6 +91,7 @@ const app = createApp({
                     cantidad: cantidadKilos,
                 });
                 localStorage.setItem("registros", JSON.stringify(this.registros));
+                localStorage.setItem("bodegaDos", JSON.stringify(this.bodegaDos));
                 this.cantidad = '';
             } else if(this.bodegaDos - cantidadKilos < this.bodegaDos / 10) {
                 alert("No queda suficiente arroz en esta bodega, por favor elija otra bodega");
